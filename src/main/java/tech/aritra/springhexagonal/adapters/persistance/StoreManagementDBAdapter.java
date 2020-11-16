@@ -10,12 +10,12 @@ import tech.aritra.springhexagonal.application.ports.out.UpdateStoreCountInZipCo
 import tech.aritra.springhexagonal.application.ports.out.StorePort;
 
 @Component
-public class StoreManagementDBAdapterInZipCode implements StorePort, UpdateStoreCountInZipCodePort {
+public class StoreManagementDBAdapter implements StorePort, UpdateStoreCountInZipCodePort {
   private final StoreRepository storeRepository;
   private final ZipCodeRepository zipCodeRepository;
 
   @Autowired
-  public StoreManagementDBAdapterInZipCode(StoreRepository storeRepository, ZipCodeRepository zipCodeRepository) {
+  public StoreManagementDBAdapter(StoreRepository storeRepository, ZipCodeRepository zipCodeRepository) {
     this.storeRepository = storeRepository;
     this.zipCodeRepository = zipCodeRepository;
   }
